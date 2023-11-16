@@ -1,9 +1,6 @@
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder, MinMaxScaler
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import Lasso
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
@@ -46,33 +43,22 @@ def main():
     numerical_features = data.select_dtypes(include=["number"]).columns
     categorical_features = data.select_dtypes(include=["object"]).columns
     
-    # print(f"No: of features : {len(numerical_features) + len(categorical_features)}")
-    # print(f"The numerical features : \n{numerical_features}")
-    # print(f"The categorical features : \n{categorical_features}")
-    # print(f"Shape of the dataframe : {data.shape}")
-    
-    
+    data_encoded = pd.get_dummies(data, columns=categorical_features, dtype=int)
+
     label_encoder = LabelEncoder()
     encoded_labels = label_encoder.fit_transform(labels)
     
-    X_train, X_test, y_train, y_test = train_test_split(data, encoded_labels, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(data_encoded, encoded_labels, test_size=0.92, stratify=encoded_labels, random_state=42)
     
-    preprocessor = ColumnTransformer(
-        transformers=[
-            ("numerical", StandardScaler(), numerical_features),
-            ("categorical", OneHotEncoder(handle_unknown="ignore"), categorical_features)
-        ]
-    )
-    
-    X_train_transformed = preprocessor.fit_transform(X_train)
-    X_test_transformed = preprocessor.transform(X_test)
-    
+    scaler = StandardScaler()
+    X_train[numerical_features] = scaler.fit_transform(X_train[numerical_features])
+    X_test[numerical_features] = scaler.transform(X_test[numerical_features])
     
     svm = SVC(kernel="rbf", C=1.0)
-    svm.fit(X_train_transformed, y_train)
-    y_pred = svm.predict(X_test_transformed)
-    
-    print(f"Accuracy : {accuracy_score(y_test, y_pred)}")   
+    svm.fit(X_train, y_train)
+    pred = svm.predict(X_test)
+    print(f"Accuracy : {accuracy_score(y_test, pred)}")
+    print(f"Report : \n {classification_report(y_test, pred)}")
         
 
 def convert_to_year(inp):
