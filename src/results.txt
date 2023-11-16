@@ -1,34 +1,38 @@
 ----------------- Classification Result with Individual Models and LASSO -----------------
 
-                        Accuracy  Precision    Recall  F1 Score
-Classifier                                                     
-LogisticRegression      0.815789   0.815789  0.815789  0.815789
-RandomForestClassifier  0.684211   0.696284  0.684211  0.688381
-SVC                     0.789474   0.806610  0.789474  0.793135
-AdaBoostClassifier      0.763158   0.789419  0.763158  0.767912
-KNeighborsClassifier    0.763158   0.767753  0.763158  0.764920
+            Classifier  Accuracy  Precision   Recall  F1 Score
+    LogisticRegression  0.815789   0.815789 0.815789  0.815789
+RandomForestClassifier  0.684211   0.696284 0.684211  0.688381
+                   SVC  0.789474   0.806610 0.789474  0.793135
+    AdaBoostClassifier  0.763158   0.789419 0.763158  0.767912
+  KNeighborsClassifier  0.763158   0.767753 0.763158  0.764920
 
 ----------------- Classification Results with only Individual Models -----------------
 
-                        Accuracy  Precision    Recall  F1 Score
-Classifier                                                     
-LogisticRegression      0.815789   0.815789  0.815789  0.815789
-RandomForestClassifier  0.684211   0.696284  0.684211  0.688381
-SVC                     0.763158   0.773646  0.763158  0.766286
-AdaBoostClassifier      0.763158   0.789419  0.763158  0.767912
-KNeighborsClassifier    0.763158   0.767753  0.763158  0.764920
+            Classifier  Accuracy  Precision   Recall  F1 Score
+    LogisticRegression  0.815789   0.815789 0.815789  0.815789
+RandomForestClassifier  0.684211   0.696284 0.684211  0.688381
+                   SVC  0.763158   0.773646 0.763158  0.766286
+    AdaBoostClassifier  0.763158   0.789419 0.763158  0.767912
+  KNeighborsClassifier  0.763158   0.767753 0.763158  0.764920
 
 ----------------- Classification Result with Ensemble Methods and Lasso -----------------
 
-       Classifier  Accuracy  Precision    Recall  F1 Score
-0  clf1+clf2+clf3  0.789474   0.799434  0.789474  0.792254
-1  clf1+clf2+clf3  0.750000   0.757609  0.750000  0.752632
-2  clf1+clf2+clf3  0.789474   0.793721  0.789474  0.791040
-3  clf1+clf2+clf3  0.828947   0.830592  0.828947  0.829621
-4  clf1+clf2+clf3  0.815789   0.819690  0.815789  0.817160
-5  clf1+clf2+clf3  0.802632   0.809325  0.802632  0.804709
-6  clf1+clf2+clf3  0.736842   0.741785  0.736842  0.738800
-7  clf1+clf2+clf3  0.776316   0.778352  0.776316  0.777196
-8  clf1+clf2+clf3  0.750000   0.752232  0.750000  0.750984
-9  clf1+clf2+clf3  0.789474   0.793721  0.789474  0.791040
+            Classifier  Accuracy  Precision   Recall  F1 Score
+             LR+RF+SVM  0.789474   0.799434 0.789474  0.792254
+        LR+RF+AdaBoost  0.750000   0.757609 0.750000  0.752632
+             LR+RF+KNN  0.789474   0.793721 0.789474  0.791040
+       LR+SVM+AdaBoost  0.828947   0.830592 0.828947  0.829621
+            LR+SVM+KNN  0.815789   0.819690 0.815789  0.817160
+       LR+AdaBoost+KNN  0.802632   0.809325 0.802632  0.804709
+       RF+SVM+AdaBoost  0.736842   0.741785 0.736842  0.738800
+            RF+SVM+KNN  0.776316   0.778352 0.776316  0.777196
+       RF+AdaBoost+KNN  0.750000   0.752232 0.750000  0.750984
+      SVM+AdaBoost+KNN  0.789474   0.793721 0.789474  0.791040
+    LR+RF+SVM+AdaBoost  0.789474   0.799434 0.789474  0.792254
+         LR+RF+SVM+KNN  0.776316   0.778352 0.776316  0.777196
+    LR+RF+AdaBoost+KNN  0.789474   0.793721 0.789474  0.791040
+   LR+SVM+AdaBoost+KNN  0.815789   0.819690 0.815789  0.817160
+   RF+SVM+AdaBoost+KNN  0.776316   0.778352 0.776316  0.777196
+LR+RF+SVM+AdaBoost+KNN  0.776316   0.778352 0.776316  0.777196
 
