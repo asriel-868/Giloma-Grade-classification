@@ -1,0 +1,20 @@
+----------------- Classification Result with Individual Models and LASSO -----------------
+
+                        Accuracy  Precision    Recall  F1 Score
+Classifier                                                     
+LogisticRegression      0.815789   0.815789  0.815789  0.815789
+RandomForestClassifier  0.684211   0.696284  0.684211  0.688381
+SVC                     0.789474   0.806610  0.789474  0.793135
+AdaBoostClassifier      0.763158   0.789419  0.763158  0.767912
+KNeighborsClassifier    0.763158   0.767753  0.763158  0.764920
+
+----------------- Classification Results with only Individual Models -----------------
+
+                        Accuracy  Precision    Recall  F1 Score
+Classifier                                                     
+LogisticRegression      0.815789   0.815789  0.815789  0.815789
+RandomForestClassifier  0.684211   0.696284  0.684211  0.688381
+SVC                     0.763158   0.773646  0.763158  0.766286
+AdaBoostClassifier      0.763158   0.789419  0.763158  0.767912
+KNeighborsClassifier    0.763158   0.767753  0.763158  0.764920
+
