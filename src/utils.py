@@ -47,11 +47,22 @@ def pipeline_predictions(pipeline, clf, x_train, y_train, x_test):
 def classification_results(pipeline, clf, x_train, y_train, x_test, y_test):
     y_pred = pipeline_predictions(pipeline, clf, x_train, y_train, x_test)
     metrics = classification_metrics(y_test, y_pred)
-    result_dict = {
-        'Classifier': type(clf).__name__,
-        'Accuracy': metrics[0],
-        'Precision': metrics[1],
-        'Recall': metrics[2],
-        'F1 Score': metrics[3]
-    }
+
+    if type(clf).__name__ != "VotingClassifier":
+        result_dict = {
+            'Classifier': type(clf).__name__,
+            'Accuracy': metrics[0],
+            'Precision': metrics[1],
+            'Recall': metrics[2],
+            'F1 Score': metrics[3]
+        }
+    else:
+        result_dict = {
+            'Classifier': "+".join(name for name, _ in clf.estimators),
+            'Accuracy': metrics[0],
+            'Precision': metrics[1],
+            'Recall': metrics[2],
+            'F1 Score': metrics[3]
+        }
+
     return result_dict

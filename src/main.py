@@ -1,3 +1,5 @@
+import pandas as pd
+
 from imports import *
 
 
@@ -71,6 +73,17 @@ def main():
     results_individual_models_with_lasso = pd.concat(individual_models_with_lasso, ignore_index=True).set_index("Classifier")
     results_individual_models_without_lasso = pd.concat(individual_models_without_lasso, ignore_index=True).set_index("Classifier")
 
+    classifier_combinations_3 = list(combinations(classifiers, 3))
+    combinations_with_lasso = []
+
+    for combo in classifier_combinations_3:
+        voting_clf = VotingClassifier(estimators=[('clf1', combo[0]), ('clf2', combo[1]), ('clf3', combo[2])],
+                                      voting='soft')
+        resul_dict_comb_lasso = utils.classification_results(pipeline_lasso, voting_clf, x_train, y_train, x_test, y_test)
+        combinations_with_lasso.append(pd.DataFrame([resul_dict_comb_lasso]))
+
+    results_combinations_with_lasso = pd.concat(combinations_with_lasso, ignore_index=True)
+
     if os.path.exists("results.txt"):
         os.remove("results.txt")
     with open("results.txt", "w") as f:
@@ -79,6 +92,9 @@ def main():
         f.write("\n\n")
         f.write("----------------- Classification Results with only Individual Models -----------------\n\n")
         f.write(str(results_individual_models_without_lasso))
+        f.write("\n\n")
+        f.write("----------------- Classification Result with Ensemble Methods and Lasso -----------------\n\n")
+        f.write(str(results_combinations_with_lasso))
         f.write("\n\n")
 
 
