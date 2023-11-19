@@ -1,80 +1,56 @@
----------------
-Gender                        --
-Age_at_diagnosis              --
-Primary_Diagnosis             --
-Race                          --
-IDH1                 NOT_MUTATED
-TP53                 NOT_MUTATED
-ATRX                 NOT_MUTATED
-PTEN                 NOT_MUTATED
-EGFR                     MUTATED
-CIC                  NOT_MUTATED
-MUC16                NOT_MUTATED
-PIK3CA                   MUTATED
-NF1                  NOT_MUTATED
-PIK3R1               NOT_MUTATED
-FUBP1                NOT_MUTATED
-RB1                  NOT_MUTATED
-NOTCH1               NOT_MUTATED
-BCOR                 NOT_MUTATED
-CSMD3                NOT_MUTATED
-SMARCA4              NOT_MUTATED
-GRIN2A               NOT_MUTATED
-IDH2                 NOT_MUTATED
-FAT4                 NOT_MUTATED
-PDGFRA               NOT_MUTATED
-labels                       GBM
-Name: 102, dtype: object
----------------
-Gender                        --
-Age_at_diagnosis              --
-ace                          --
-IDH1                 NOT_MUTATED
-TP53                 NOT_MUTATED
-ATRX                 NOT_MUTATED
-PTEN                 NOT_MUTATED
-EGFR                 NOT_MUTATED
-CIC                  NOT_MUTATED
-MUC16                    MUTATED
-PIK3CA               NOT_MUTATED
-NF1                  NOT_MUTATED
-PIK3R1               NOT_MUTATED
-FUBP1                NOT_MUTATED
-RB1                  NOT_MUTATED
-NOTCH1               NOT_MUTATED
-BCOR                 NOT_MUTATED
-CSMD3                NOT_MUTATED
-SMARCA4              NOT_MUTATED
-GRIN2A               NOT_MUTATED
-IDH2                 NOT_MUTATED
-FAT4                 NOT_MUTATED
-PDGFRA               NOT_MUTATED
-labels                       GBM
-Name: 435, dtype: object
----------------
-Gender                        --
-Age_at_diagnosis              --
-Primary_Diagnosis             --
-Race                          --
-IDH1                 NOT_MUTATED
-TP53                 NOT_MUTATED
-ATRX                 NOT_MUTATED
-PTEN                     MUTATED
-EGFR                 NOT_MUTATED
-CIC                  NOT_MUTATED
-MUC16                NOT_MUTATED
-PIK3CA               NOT_MUTATED
-NF1                  NOT_MUTATED
-PIK3R1               NOT_MUTATED
-FUBP1                NOT_MUTATED
-RB1                  NOT_MUTATED
-NOTCH1               NOT_MUTATED
-BCOR                 NOT_MUTATED
-CSMD3                NOT_MUTATED
-SMARCA4              NOT_MUTATED
-GRIN2A               NOT_MUTATED
-IDH2                 NOT_MUTATED
-FAT4                 NOT_MUTATED
-PDGFRA               NOT_MUTATED
-labels                       GBM
-Name: 558, dtype: object
+----------------- Correlation Matrix with Target class GBM -----------------
+
+Age_at_diagnosis                                   0.525862
+Gender_Female                                     -0.068175
+Gender_Male                                        0.068175
+Primary_Diagnosis_Astrocytoma, NOS                -0.233350
+Primary_Diagnosis_Astrocytoma, anaplastic         -0.360045
+Primary_Diagnosis_Glioblastoma                     1.000000
+Primary_Diagnosis_Mixed glioma                    -0.361891
+Primary_Diagnosis_Oligodendroglioma, NOS          -0.314420
+Primary_Diagnosis_Oligodendroglioma, anaplastic   -0.256250
+Race_american indian or alaska native             -0.030925
+Race_asian                                         0.002859
+Race_black or african american                     0.119421
+Race_white                                        -0.103751
+IDH1_MUTATED                                      -0.711430
+IDH1_NOT_MUTATED                                   0.711430
+TP53_MUTATED                                      -0.173310
+TP53_NOT_MUTATED                                   0.173310
+ATRX_MUTATED                                      -0.327129
+ATRX_NOT_MUTATED                                   0.327129
+PTEN_MUTATED                                       0.371808
+PTEN_NOT_MUTATED                                  -0.371808
+EGFR_MUTATED                                       0.227743
+EGFR_NOT_MUTATED                                  -0.227743
+CIC_MUTATED                                       -0.299953
+CIC_NOT_MUTATED                                    0.299953
+MUC16_MUTATED                                      0.105557
+MUC16_NOT_MUTATED                                 -0.105557
+PIK3CA_MUTATED                                     0.021500
+PIK3CA_NOT_MUTATED                                -0.021500
+NF1_MUTATED                                        0.083693
+NF1_NOT_MUTATED                                   -0.083693
+PIK3R1_MUTATED                                     0.092840
+PIK3R1_NOT_MUTATED                                -0.092840
+FUBP1_MUTATED                                     -0.182652
+FUBP1_NOT_MUTATED                                  0.182652
+RB1_MUTATED                                        0.202700
+RB1_NOT_MUTATED                                   -0.202700
+NOTCH1_MUTATED                                    -0.187236
+NOTCH1_NOT_MUTATED                                 0.187236
+BCOR_MUTATED                                      -0.001839
+BCOR_NOT_MUTATED                                   0.001839
+CSMD3_MUTATED                                      0.053649
+CSMD3_NOT_MUTATED                                 -0.053649
+SMARCA4_MUTATED                                   -0.101395
+SMARCA4_NOT_MUTATED                                0.101395
+GRIN2A_MUTATED                                     0.099792
+GRIN2A_NOT_MUTATED                                -0.099792
+IDH2_MUTATED                                      -0.097463
+IDH2_NOT_MUTATED                                   0.097463
+FAT4_MUTATED                                       0.027349
+FAT4_NOT_MUTATED                                  -0.027349
+PDGFRA_MUTATED                                     0.094322
+PDGFRA_NOT_MUTATED                                -0.094322
+

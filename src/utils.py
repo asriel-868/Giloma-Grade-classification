@@ -1,5 +1,4 @@
 from imports import *
-import re
 
 """ Function to convert age to float. The age is expected to be in the format : X years Y days """
 
@@ -26,6 +25,7 @@ def classification_metrics(y_test, y_pred):
     precision = precision_score(y_test, y_pred, average="weighted")
     recall = recall_score(y_test, y_pred, average="weighted")
     f1 = f1_score(y_test, y_pred, average="weighted")
+
 
     return accuracy, precision, recall, f1
 

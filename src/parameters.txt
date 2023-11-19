@@ -1,0 +1,9 @@
+Best Parameters:  {'svm__C': 0.1, 'svm__gamma': 'scale', 'svm__kernel': 'rbf'}
+Best Parameters:  {'lr__C': 0.1, 'lr__penalty': 'l2', 'lr__solver': 'liblinear'}
+Best Parameters:  {'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 10, 'rf__n_estimators': 50}
+Best Parameters:  {'knn__metric': 'euclidean', 'knn__n_neighbors': 7,  'knn__weights': 'uniform'}
+Best Parameters:  {'adaboost__learning_rate': 0.1, 'adaboost__n_estimators': 200}
+
+This is when primary diagnosis is not dropped
+
+Best Parameters:  {'knn__metric': 'manhattan', 'knn__n_neighbors': 3, 'knn__weights': 'distance'}

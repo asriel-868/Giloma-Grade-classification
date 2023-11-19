@@ -1,38 +1,58 @@
 ----------------- Classification Result with Individual Models and LASSO -----------------
 
             Classifier  Accuracy  Precision   Recall  F1 Score
-    LogisticRegression  0.815789   0.815789 0.815789  0.815789
-RandomForestClassifier  0.684211   0.696284 0.684211  0.688381
-                   SVC  0.789474   0.806610 0.789474  0.793135
-    AdaBoostClassifier  0.763158   0.789419 0.763158  0.767912
-  KNeighborsClassifier  0.763158   0.767753 0.763158  0.764920
+    LogisticRegression  0.881579   0.892980 0.881579  0.883413
+RandomForestClassifier  0.828947   0.827753 0.828947  0.828198
+                   SVC  0.881579   0.892980 0.881579  0.883413
+    AdaBoostClassifier  0.855263   0.867225 0.855263  0.857505
+  KNeighborsClassifier  0.868421   0.871626 0.868421  0.869400
 
 ----------------- Classification Results with only Individual Models -----------------
 
             Classifier  Accuracy  Precision   Recall  F1 Score
-    LogisticRegression  0.815789   0.815789 0.815789  0.815789
-RandomForestClassifier  0.684211   0.696284 0.684211  0.688381
-                   SVC  0.763158   0.773646 0.763158  0.766286
-    AdaBoostClassifier  0.763158   0.789419 0.763158  0.767912
-  KNeighborsClassifier  0.763158   0.767753 0.763158  0.764920
+    LogisticRegression  0.881579   0.892980 0.881579  0.883413
+RandomForestClassifier  0.815789   0.815789 0.815789  0.815789
+                   SVC  0.881579   0.892980 0.881579  0.883413
+    AdaBoostClassifier  0.855263   0.867225 0.855263  0.857505
+  KNeighborsClassifier  0.868421   0.876797 0.868421  0.870159
 
------------------ Classification Result with Ensemble Methods and Lasso -----------------
+----------------- Classification Result with Voting Methods and Lasso -----------------
 
             Classifier  Accuracy  Precision   Recall  F1 Score
-             LR+RF+SVM  0.789474   0.799434 0.789474  0.792254
-        LR+RF+AdaBoost  0.750000   0.757609 0.750000  0.752632
-             LR+RF+KNN  0.789474   0.793721 0.789474  0.791040
-       LR+SVM+AdaBoost  0.828947   0.830592 0.828947  0.829621
-            LR+SVM+KNN  0.815789   0.819690 0.815789  0.817160
-       LR+AdaBoost+KNN  0.802632   0.809325 0.802632  0.804709
-       RF+SVM+AdaBoost  0.736842   0.741785 0.736842  0.738800
-            RF+SVM+KNN  0.776316   0.778352 0.776316  0.777196
-       RF+AdaBoost+KNN  0.750000   0.752232 0.750000  0.750984
-      SVM+AdaBoost+KNN  0.789474   0.793721 0.789474  0.791040
-    LR+RF+SVM+AdaBoost  0.789474   0.799434 0.789474  0.792254
-         LR+RF+SVM+KNN  0.776316   0.778352 0.776316  0.777196
-    LR+RF+AdaBoost+KNN  0.789474   0.793721 0.789474  0.791040
-   LR+SVM+AdaBoost+KNN  0.815789   0.819690 0.815789  0.817160
-   RF+SVM+AdaBoost+KNN  0.776316   0.778352 0.776316  0.777196
-LR+RF+SVM+AdaBoost+KNN  0.776316   0.778352 0.776316  0.777196
+             LR+RF+SVM  0.881579   0.892980 0.881579  0.883413
+        LR+RF+AdaBoost  0.868421   0.871626 0.868421  0.869400
+             LR+RF+KNN  0.868421   0.871626 0.868421  0.869400
+       LR+SVM+AdaBoost  0.881579   0.892980 0.881579  0.883413
+            LR+SVM+KNN  0.881579   0.892980 0.881579  0.883413
+       LR+AdaBoost+KNN  0.894737   0.902584 0.894737  0.896127
+       RF+SVM+AdaBoost  0.868421   0.871626 0.868421  0.869400
+            RF+SVM+KNN  0.881579   0.886899 0.881579  0.882825
+       RF+AdaBoost+KNN  0.842105   0.842105 0.842105  0.842105
+      SVM+AdaBoost+KNN  0.894737   0.902584 0.894737  0.896127
+    LR+RF+SVM+AdaBoost  0.881579   0.892980 0.881579  0.883413
+         LR+RF+SVM+KNN  0.894737   0.902584 0.894737  0.896127
+    LR+RF+AdaBoost+KNN  0.868421   0.871626 0.868421  0.869400
+   LR+SVM+AdaBoost+KNN  0.881579   0.892980 0.881579  0.883413
+   RF+SVM+AdaBoost+KNN  0.881579   0.886899 0.881579  0.882825
+LR+RF+SVM+AdaBoost+KNN  0.894737   0.902584 0.894737  0.896127
+
+----------------- Classification Result with only Voting Methods -----------------
+
+            Classifier  Accuracy  Precision   Recall  F1 Score
+             LR+RF+SVM  0.881579   0.892980 0.881579  0.883413
+        LR+RF+AdaBoost  0.868421   0.871626 0.868421  0.869400
+             LR+RF+KNN  0.855263   0.861041 0.855263  0.856787
+       LR+SVM+AdaBoost  0.881579   0.892980 0.881579  0.883413
+            LR+SVM+KNN  0.881579   0.892980 0.881579  0.883413
+       LR+AdaBoost+KNN  0.881579   0.892980 0.881579  0.883413
+       RF+SVM+AdaBoost  0.855263   0.861041 0.855263  0.856787
+            RF+SVM+KNN  0.868421   0.876797 0.868421  0.870159
+       RF+AdaBoost+KNN  0.855263   0.856712 0.855263  0.855833
+      SVM+AdaBoost+KNN  0.881579   0.892980 0.881579  0.883413
+    LR+RF+SVM+AdaBoost  0.881579   0.892980 0.881579  0.883413
+         LR+RF+SVM+KNN  0.881579   0.892980 0.881579  0.883413
+    LR+RF+AdaBoost+KNN  0.855263   0.861041 0.855263  0.856787
+   LR+SVM+AdaBoost+KNN  0.881579   0.892980 0.881579  0.883413
+   RF+SVM+AdaBoost+KNN  0.868421   0.876797 0.868421  0.870159
+LR+RF+SVM+AdaBoost+KNN  0.881579   0.892980 0.881579  0.883413
 
